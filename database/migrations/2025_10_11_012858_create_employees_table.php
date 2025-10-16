@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+            $table->text('nif', 20);
+            $table->string('tlfno', 12);
+            $table->tinyInteger('num_hijos');
+
+            //foraneas
+            
             $table->timestamps();
         });
     }

@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('centers', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('direccion');
+            $table->bigInteger('poblacion');
+
+            //foraneas
+            
             $table->timestamps();
         });
     }
