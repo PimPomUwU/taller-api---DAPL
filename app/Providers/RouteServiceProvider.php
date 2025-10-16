@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
@@ -18,9 +18,9 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Bootstrap services.
      */
- public function boot(): void
+    public function boot(): void
     {
-          $this->mapApiRoutes();
+        $this->mapApiRoutes();
     }
     protected function mapApiRoutes(): void
     {
