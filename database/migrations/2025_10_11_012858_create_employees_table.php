@@ -18,7 +18,6 @@ return new class extends Migration
             $table->tinyInteger('num_hijos');
 
             //foraneas
-            
             $table->timestamps();
         });
     }
