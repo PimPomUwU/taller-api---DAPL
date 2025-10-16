@@ -13,7 +13,7 @@ class Employee extends Model
 
     public function center()
     {
-        return $this->hasOne(Center::class);
+        return $this->hasOne(Center::class, 'employee_manager_id', 'id');
     }
 
 }
