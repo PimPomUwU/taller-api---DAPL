@@ -18,7 +18,7 @@ return new class extends Migration
             $table->bigInteger('poblacion');
 
             //foraneas
-            $table->unsignedBigInteger('employee_manager_id')->nullable();
+            $table->unsignedBigInteger('employee_manager_id')->nullable()->unique();
 
             //relacion foraneas
             $table->foreign('employee_manager_id')->references('id')->on('employees');
