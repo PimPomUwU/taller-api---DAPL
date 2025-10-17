@@ -9,10 +9,16 @@ class CenterController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        $centers = \App\Models\Center::with('employee_manager')->get();
 
+        if ($request->wantsJson()) {
+            return response()->json(['data' => $centers], 200);
+        }
+
+        return view('center.index', compact('centers'));
     }
 
     /**
