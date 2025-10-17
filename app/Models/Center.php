@@ -15,7 +15,10 @@ class Center extends Model
 
     public function employee_manager()
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Employee::class)->withDefault([
+                    'nif' => 'Sin asignar',
+                    'tlfno' => '-',
+                ]);
     }
 
 }
