@@ -23,6 +23,8 @@ class CentersSeeder extends Seeder
                 Center::factory()->create([
                     'employee_manager_id' => $employeeId,
                 ]);
+            } else {
+                Center::factory()->create();
             }
         }
     }
